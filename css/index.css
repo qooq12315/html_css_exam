@@ -1,0 +1,212 @@
+body {
+    background-color: lightgray;
+}
+
+#root {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "header"
+        "content"
+        "footer"
+}
+
+#layout header {
+    grid-area: header;
+    background-color: rgb(255, 255, 255);
+
+}
+
+#layout main {
+    grid-area: content;
+    background-color: rgb(33, 48, 95);
+}
+
+#layout footer {
+    grid-area: footer;
+    background-color: rgb(133, 127, 138);
+}
+
+#cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#cards section {
+    flex: 0 1 100%;
+    padding: 2em;
+
+}
+
+#cards section div {
+    box-shadow: 2px 2px 1px rgba(255, 159, 81, 0.2)
+}
+
+#cards .card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+#cards .card .cardTitle {
+    flex: 0 1 200px;
+}
+
+#cards .card .cardText {
+    flex: 0 1 100px;
+    padding: 1em;
+}
+
+#cards .card .cardFooter {
+    flex: 0 1 50px;
+}
+
+#cards .cardFooter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 1em;
+}
+
+#cards .cardFooter .view {
+    flex: 0 1 auto;
+    background-color: rgba(123, 176, 255, 0.966);
+    padding: 0.5em;
+    border-radius: 1em 0.5em 0.5em 1em;
+}
+
+#cards .cardFooter .edit {
+    flex: 0 1 auto;
+    background-color: rgba(123, 176, 255, 0.966);
+    padding: 0.5em;
+    border-radius: 0.5em 1em 1em 0.5em;
+}
+
+#cards .cardFooter a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: 2px solid rgb(255, 255, 255);
+    background-color: rgb(175, 97, 97);
+    font-size: 0.9em;
+}
+
+#cards .cardFooter span {
+    flex: 0 1 auto;
+    margin-left: auto;
+    padding: 0.5em;
+    font-size: 0.8em;
+    color: rgb(247, 117, 112);
+}
+
+
+/*header*/
+header h2 {
+    font-size: 2em;
+    text-align: center;
+    line-height: 1.5em;
+    color: rgba(0, 0, 0, 0.582);
+    margin-top: 2em;
+
+}
+
+header img {
+    display: block;
+    margin: 1em auto 2em;
+}
+
+/*footer*/
+
+footer ul {
+    margin: 2em 2em 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    text-align: center;
+
+}
+
+footer address {
+    margin-top: 2em;
+    text-align: center;
+    font-size: small;
+    color: lightgray;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+footer ul a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+footer ul img,
+footer ul span {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+footer ul li {
+    list-style-type: none;
+    padding: 0 1em;
+
+}
+
+/*landscape phomes*/
+@media (min-width: 576px) {
+    #root {
+        max-width: 100%;
+    }
+}
+
+/*medium */
+@media (min-width: 768px) {
+    #root {
+        max-width: 720px;
+    }
+
+    #cards section {
+        flex: 0 1 50%;
+    }
+}
+
+/* desltops*/
+@media (min-width: 992px) {
+    #root {
+        max-width: 960px;
+    }
+}
+
+/* large desktops*/
+@media (min-width: 1200px) {
+    #root {
+        max-width: 1140px;
+    }
+
+    #cards section {
+        flex: 1 1 33%;
+    }
+}
+
+/* large desktops*/
+@media (min-width: 1400px) {
+    #root {
+        max-width: 1320px;
+    }
+}
